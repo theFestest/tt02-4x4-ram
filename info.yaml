@@ -19,8 +19,8 @@ documentation:
   title:        "4x4 RAM"      # Project title
   description:  "4 word, 4 bit read/write RAM"      # Short description of what your project does
   how_it_works: "Set write enable to write to the given address. Read given address on output."      # Longer description of how the project works
-  how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  ""      # Describe any external hardware needed
+  how_to_test:  "Set a word on data lines, set address on addr lines. Cycle write enable. Try reading value on rdata."      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "None."      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
   doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     0       # Clock frequency in Hz (if required) we are expecting max clock frequency to be ~6khz. Provided on input 0.
