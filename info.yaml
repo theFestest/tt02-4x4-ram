@@ -1,7 +1,7 @@
 --- 
 # TinyTapeout project information
 project:
-  wokwi_id:    0        # If using wokwi, set this to your project's ID
+  wokwi_id: 341557831870186068        # If using wokwi, set this to your project's ID
 #  source_files:        # If using an HDL, set wokwi_id as 0 and uncomment and list your source files here. Source files must be in ./src
 #    - counter.v
 #    - decoder.v
@@ -14,11 +14,11 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       ""      # Your name
-  discord:      ""      # Your discord handle - make sure to include the # part as well
-  title:        ""      # Project title
-  description:  ""      # Short description of what your project does
-  how_it_works: ""      # Longer description of how the project works
+  author:       "Michael Bartholic"      # Your name
+  discord:      "theFestest#7917"      # Your discord handle - make sure to include the # part as well
+  title:        "4x4 RAM"      # Project title
+  description:  "4 word, 4 bit read/write RAM"      # Short description of what your project does
+  how_it_works: "Set write enable to write to the given address. Read given address on output."      # Longer description of how the project works
   how_to_test:  ""      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  ""      # Describe any external hardware needed
   language:     "wokwi" # other examples include Verilog, Amaranth, VHDL, etc
@@ -27,20 +27,20 @@ documentation:
   picture:      ""      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
     - clock
-    - reset
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - data[0]
+    - data[1]
+    - data[2]
+    - data[3]
+    - addr[0]
+    - addr[1]
+    - write_enable
   outputs:
-    - segment a         # a description of what the outputs do
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - none
+    - rdata[0]         # a description of what the outputs do
+    - rdata[1]
+    - rdata[2]
+    - rdata[3]
+    - addr[0]
+    - addr[1]
+    - clock
+    - write_enable
 
